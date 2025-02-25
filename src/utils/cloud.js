@@ -10,7 +10,7 @@ cloudinary.config({
 
 });
 
-import { v2 as cloudinary } from 'cloudinary';
+
 
 const uploadOnCloudinary=async (localFilePath)=>{
     try{
@@ -19,7 +19,8 @@ const uploadOnCloudinary=async (localFilePath)=>{
             resource_type:"auto"
         })
         //file uploaded succesfully
-        console.log("cloudUploaded succesfully",response.url)
+        fs.unlinkSync(localFilePath)
+        console.log("cloudUploaded succesfully")
         return response;
     }
     catch(error){
