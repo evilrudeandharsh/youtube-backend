@@ -4,8 +4,7 @@ import {ApiError} from "../utils/ApiError.js"
 import jwt from "jsonwebtoken"
 import {User} from "../models/user.model.js"
 
-export const verifyJWT=asyncHandler(async(req,res,
-    next)=>{
+const verifyJWT=asyncHandler(async(req,_,next)=>{
 
         try {
             const token=req.cookies?.accessToken|| req.header
@@ -38,3 +37,6 @@ export const verifyJWT=asyncHandler(async(req,res,
 
 
     })
+
+
+export default verifyJWT
