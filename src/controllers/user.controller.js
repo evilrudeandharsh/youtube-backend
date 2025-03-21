@@ -33,7 +33,7 @@ const generateAccessAndRefreshTokens=async(userId)=>{
 
 
 const registerUser = asyncHandler(async (req, res) => {
-    console.log("Its working for some reason")
+    console.log("register user working for some reason")
     const {fullname,email,username,password}=req.body
     console.log(email)
 
