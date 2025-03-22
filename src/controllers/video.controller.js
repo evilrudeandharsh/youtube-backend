@@ -35,8 +35,8 @@ const getAllVideos = asyncHandler(async (req, res) => {
         message: "Videos retrived successfully",
         data: videos,
         pagination: {
-            page: pageNumber,
-            limit: pageLimit,
+            page: pageNo,
+            limit: limitNo,
             totalPages,
             totalVideos,
         },
